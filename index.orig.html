@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>ATM test</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="athena:variable" content="asdasd">
+        <meta name="athena:implicit-timeout" content="20000">
+    </head>
+    <body>
+        <div class="screen" style="background-color: pink" id="main" data-timeout="#timeout" data-time="7.5" data-initial="true">
+            <button class="right btn1" data-target="blah" id="right1">RIGHT 1 &rarr;</button>
+            <button class="right btn2">RIGHT 2 &rarr;</button>
+            <button class="right btn3">RIGHT 3 &rarr;</button>
+            <button class="right btn4">RIGHT 4 &rarr;</button>
+
+            <button class="left btn1" data-target="blah">&larr; LEFT 1</button>
+            <button class="left btn2">&larr; LEFT 2</button>
+            <button class="left btn3">&larr; LEFT 3</button>
+            <button class="left btn4">&larr; LEFT 4</button>
+            
+            <nav data-device="EPP" data-trigger="PinEntered"></nav>
+            <nav data-device="ICM" data-trigger="ReadCard"></nav>
+            <nav data-device="AFD" data-trigger="CashOut"></nav>
+        </div>
+
+        <div class="screen" style="background-color: green" id="timeout" data-timeout="#main" data-time="5">
+            <button class="right btn1" data-target="blah">RIGHT 1 &rarr;</button>
+            <button class="right btn2">RIGHT 2 &rarr;</button>
+            <button class="right btn3">RIGHT 3 &rarr;</button>
+            <button class="right btn4">RIGHT 4 &rarr;</button>
+
+            <button class="left btn1" data-target="blah">&larr; LEFT 1</button>
+            <button class="left btn2">&larr; LEFT 2</button>
+        </div>
+
+        <div class="screen" style="background-color: cyan" id="blah">
+            <button class="right btn1" data-target="main">RIGHT 1 &rarr;</button>
+            <button class="right btn2">RIGHT 2 &rarr;</button>
+            <button class="right btn3">RIGHT 3 &rarr;</button>
+            <button class="right btn4">RIGHT 4 &rarr;</button>
+
+            <button class="left btn1" data-target="main">&larr; LEFT 1</button>
+        </div>
+    </body>
+</html>
