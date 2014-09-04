@@ -30,13 +30,13 @@
         </script>
     </head>
     <body>
-        <div class="screen" id="Screen1" data-timeout="#Screen2" data-time="7.5" data-start="true">
+        <div class="screen" id="Screen1" data-start="true">
             <button class="right btn1" data-target="#blah" id="right1">RIGHT 1 &rarr;</button>
             <button class="right btn2">RIGHT 2 &rarr;</button>
             <button class="right btn3">RIGHT 3 &rarr;</button>
             <button class="right btn4">RIGHT 4 &rarr;</button>
 
-            <button class="left btn1" data-target="#blah" data-video="tunnel_animation.webm">&larr; LEFT 1</button>
+            <button class="left btn1" data-target="#blah">&larr; LEFT 1</button>
             <button class="left btn2">&larr; LEFT 2</button>
             <button class="left btn3">&larr; LEFT 3</button>
             <button class="left btn4">&larr; LEFT 4</button>
@@ -45,10 +45,10 @@
             <nav data-device="ICM" data-trigger="ReadCard" data-target="#blah"></nav>
             <nav data-device="AFD" data-trigger="CashOut" data-target="#blah"></nav>
             
-            <nav data-timeout="7.5" data-target="#Screen2"></nav>
+            <nav data-timeout="5" data-target="#Screen2"></nav>
         </div>
 
-        <div class="screen" id="Screen2">
+        <div class="screen" id="Screen2" data-video="assets/tunnel_animation.webm">
             <nav data-timeout="7.5" data-target="#Screen3"></nav>
         </div>
 
