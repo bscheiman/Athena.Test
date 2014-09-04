@@ -17,16 +17,20 @@
             }
 
             #Screen1 { background-image: url('img/Screen1.jpg'); }
-
             #Screen2 { background-image: url('img/Screen2.jpg'); }
-
             #Screen3 { background-image: url('img/Screen3.jpg'); }
-
             #Screen4 { background-image: url('img/Screen4.jpg'); }
         </style>
+        <script>
+            function Screen1_enter() {
+            }
+            
+            function Screen1_timeout() {
+            }
+        </script>
     </head>
     <body>
-        <div class="screen" id="Screen1" data-timeout="#Screen2" data-time="7.5" data-initial="true">
+        <div class="screen" id="Screen1" data-timeout="#Screen2" data-time="7.5" data-start="true">
             <button class="right btn1" data-target="#blah" id="right1">RIGHT 1 &rarr;</button>
             <button class="right btn2">RIGHT 2 &rarr;</button>
             <button class="right btn3">RIGHT 3 &rarr;</button>
@@ -44,13 +48,16 @@
             <nav data-timeout="7.5" data-target="#Screen2"></nav>
         </div>
 
-        <div class="screen" id="Screen2" data-timeout="#Screen3" data-time="7.5">
+        <div class="screen" id="Screen2">
+            <nav data-timeout="7.5" data-target="#Screen3"></nav>
         </div>
 
-        <div class="screen" id="Screen3" data-timeout="#Screen4" data-time="7.5">
+        <div class="screen" id="Screen3">
+            <nav data-timeout="7.5" data-target="#Screen4"></nav>
         </div>
 
-        <div class="screen" id="Screen4" data-timeout="#Screen1" data-time="7.5" data-end="true">
+        <div class="screen" id="Screen4" data-end="true">
+            <nav data-timeout="7.5" data-target="#Screen1"></nav>
         </div>
     </body>
 </html>
